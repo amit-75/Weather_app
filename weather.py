@@ -54,33 +54,7 @@ def weather():
     (city,temp,nature,feel_like,forcast,wind,current_time,visibility,pressure,humidity,dew_point) = scrap_info(city)
     weather_info = [city,temp, nature, feel_like, forcast, wind, current_time, visibility, pressure, humidity, dew_point]
     return render_template('weather.html',weather_info=weather_info)
-    # return weather_info
 
-
-
-
-# @app.route('/', methods=['GET','POST'])
-# def weather():
-    
-#     if request.method=="get":
-#         city = request.form.get("city_name")
-        
-#         city_in = {
-#          "city_name" : city
-#         }
-
-#         data=request.get_json(city_in)
-#         print(data)
-        # city=data["city"]
-        # url = 'https://www.google.com/search?q=weather+"'+city+'"'
-        # ht = requests.get(url).content
-        # soup = BeautifulSoup(ht, 'html.parser')
-        # aa = soup.find_all('div', class_='BNeawe iBp4i AP7Wnd')
-        # bb = aa[0].text
-        # return "Temparatue : "+bb
-    # if request.method=="GET":
-    #     return jsonify(data)
-    # return render_template('01_weather.html')
 
 if __name__ == "__main__":
     app.run(debug='True', host='0.0.0.0', port='5000')
