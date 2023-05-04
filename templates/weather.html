@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -16,8 +16,8 @@
             <div class="mb-3">
               <h1>Wheather Application</h1>
               <h2>City name : </h2>
-              <!-- <label for="exampleInputEmail1" class="form-label">City Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1"     aria-describedby="emailHelp"> -->
+              <label for="exampleInputEmail1" class="form-label">City Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1"     aria-describedby="emailHelp">
               <input type="text" name = "city_name" >
             </div>
         
@@ -42,3 +42,74 @@
   </body>
 </html>
 
+ -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <div class="search-bar">
+      <form action="/" method="POST">
+        <input type="text" name="city" placeholder="Enter location...">
+        <button>Search</button>
+      </form>
+    </div>
+    <div class="weather-info">
+      <div class="city">
+        <h2>City</h2>
+        <p>{{weather_info[0]}}</p>
+      </div>
+      <div class="temp">
+        <h2>Temperature</h2>
+        <p>{{weather_info[1]}}</p>
+      </div>
+      <div class="nature">
+        <h2>Nature</h2>
+        <p>{{weather_info[2]}}</p>
+      </div>
+      <div class="feel-like">
+        <h2>Feels Like</h2>
+        <p>{{weather_info[3]}}</p>
+      </div>
+      <div class="forecast">
+        <h2>Forecast</h2>
+        <p>{{weather_info[4]}}</p>
+      </div>
+      <div class="wind">
+        <h2>Wind</h2>
+        <p>{{weather_info[5]}}</p>
+      </div>
+      <div class="current-time">
+        <h2>Current Time</h2>
+        <p>{{weather_info[6]}}</p>
+      </div>
+      <div class="visibility">
+        <h2>Visibility</h2>
+        <p>{{weather_info[7]}}</p>
+      </div>
+      <div class="pressure">
+        <h2>Pressure</h2>
+        <p>{{weather_info[8]}}</p>
+      </div>
+      <div class="humidity">
+        <h2>Humidity</h2>
+        <p>{{weather_info[9]}}</p>
+      </div>
+      <div class="dew-point">
+        <h2>Dew Point</h2>
+        <p>{{weather_info[10]}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
